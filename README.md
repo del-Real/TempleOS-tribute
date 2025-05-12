@@ -2,10 +2,10 @@
 
 A web tribute to Terry A. Davis and his creation, TempleOS.
 
+[TempleOS Web Tribute](https://templeostribute.netlify.app/)
+<br><br>
 
-![TempleOS Web Tribute Screenshot](screenshot.png)
+![TempleOS Web Tribute Screenshot](./images/templeos_webtribute_screenshot1.jpg)
 
 
-## Live Demo
-
-Link: [https://templeostribute.netlify.app/](https://templeostribute.netlify.app/)
+![TempleOS Web Tribute Screenshot](./images/templeos_webtribute_screenshot2.jpg)
