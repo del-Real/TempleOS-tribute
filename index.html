@@ -27,7 +27,6 @@
                 <p id="date-js"></p>
                 <p id="time-js"></p>
                 <p id="fps-counter"></p>
-                <!-- <p id="year-js"></p> -->
                 <p style="text-align: right;margin-left: 635px;"><strong>ENTER</strong></p>
             </div>
 
@@ -145,7 +144,8 @@
                     <div id="title-text">templeOStribute/index.html...</div>
                 </div>
 
-                <span id='close-popup' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>[X]</span>
+                <span id='close-popup'
+                    onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>[X]</span>
 
             </div>
 
@@ -184,383 +184,390 @@
 
     <div class="main">
 
-        <!-- Window A -->
+        <div class="window-wrapper">
+            <!-- Window A -->
 
-        <input type="checkbox" id="windowControl" />
-        <label class="btn" for="windowControl">
+            <input type="checkbox" id="windowControl" />
+            <label class="btn" for="windowControl">
 
-        <div class="window">
+                <div class="windowBar">
 
-            <div class="windowBar">
+                    <span class="term">Term</span>
 
-                <span class="term">Term</span>
-    
-                <span class="menuButton">MENU</span>
-    
-                <!-- Text Slider -->
-                        
-                <div id="title">
-                    <div id="title-text">C:/Doc/PersonalMenu.DD.Z...</div>
-                </div>
-    
-                <span id='closeA' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>[X]</span>
-    
-            </div>
-            &nbsp;
-            <p>Copy this file to your <b style="color: #00a800;">/Home</b> directory</p>
-            <p>and modify it. This version is the</p>
-            <p>default.</p>
-            &nbsp; 
-            <p style="color: #5757ff;"><u>Cd:Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/Graphics"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/Snd"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/DolDoc"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/Games"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/MultiCore"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/Asm"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Doc"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo"/Lectures"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Apps"):Dir:└</u></p>
-            &nbsp; 
-            <p>Run <u style="color: #a80000;">TOSStdIns</u>() if you wish to</p>
-            <p>use the official staff <b style="color: #00a800;">/Home</b> files.</p>
-            <p style="color: #5757ff;"><u>Cd("::/Demo/AcctExample"):Dir:└</u></p>
-            &nbsp; 
-            <p>Make all with <u style="color: #a80000;">BootHDIns</u>().</p>
-            <p style="color: #5757ff;"><u>Cd("::/Kernel"):Dir:└</u></p>
-            <p style="color: #5757ff;"><u>Cd("::/Compiler"):Dir:└</u></p>
-            &nbsp; 
-            <p>The <u style="color: #a80000;">::/StartOS.HC</u> file is compiled</p>
-            <p>every time you boot.</p>
-            <p style="color: #5757ff;"><u>Cd("::/Adam"):Dir:└</u></p>
+                    <span class="menuButton">MENU</span>
 
-            &nbsp;  
+                    <!-- Text Slider -->
 
-            <div class="row">
-                <div class="column">
-                    <p><u style="color: #a80000;">Welcome</u></p>
-                    <p><u style="color: #5757ff;">FastReboot</u></p>
-                </div>
-                <div class="column">
-                    <p><u style="color: #a80000;">Help & Index</u></p>
-                    <p><u style="color: #5757ff;">Take Tour</u></p>
-                </div>
-                <div class="column">
-                    <p><u style="color: #a80000;">Demo Index</u></p>
-                    <p><u style="color: #5757ff;">Key Map</u></p>
-                </div>
-            </div>
+                    <div id="title">
+                        <div id="title-text">C:/Doc/PersonalMenu.DD.Z...</div>
+                    </div>
 
-            <div>
+                    <span id='closeA'
+                        onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>[X]</span>
 
-            <!-- Fun Games -->
-
-            &nbsp; 
-            <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Fun Games</p>
-
-            <div class="gameBlock">
-
-                <div>
-                    <img src="images/fungames/Titanium.jpg" alt="Titanium"> 
-                    <p style="color: #5757ff; text-align: center;">Titanium</p>
                 </div>
 
-                <div>
-                    <img src="images/fungames/BlackDiamond.jpg" alt="BlackDiamond"> 
-                    <p style="color: #5757ff; text-align: center;">Black</p>
-                    <p style="color: #5757ff; text-align: center;">Diamond</p>
+                <div class="window">
+
+                    &nbsp;
+                    <p>Copy this file to your <b style="color: #00a800;">/Home</b> directory</p>
+                    <p>and modify it. This version is the</p>
+                    <p>default.</p>
+                    &nbsp;
+                    <p style="color: #5757ff;"><u>Cd:Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/Graphics"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/Snd"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/DolDoc"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/Games"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/MultiCore"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/Asm"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Doc"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo"/Lectures"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Apps"):Dir:└</u></p>
+                    &nbsp;
+                    <p>Run <u style="color: #a80000;">TOSStdIns</u>() if you wish to</p>
+                    <p>use the official staff <b style="color: #00a800;">/Home</b> files.</p>
+                    <p style="color: #5757ff;"><u>Cd("::/Demo/AcctExample"):Dir:└</u></p>
+                    &nbsp;
+                    <p>Make all with <u style="color: #a80000;">BootHDIns</u>().</p>
+                    <p style="color: #5757ff;"><u>Cd("::/Kernel"):Dir:└</u></p>
+                    <p style="color: #5757ff;"><u>Cd("::/Compiler"):Dir:└</u></p>
+                    &nbsp;
+                    <p>The <u style="color: #a80000;">::/StartOS.HC</u> file is compiled</p>
+                    <p>every time you boot.</p>
+                    <p style="color: #5757ff;"><u>Cd("::/Adam"):Dir:└</u></p>
+
+                    &nbsp;
+
+                    <div class="row">
+                        <div class="column">
+                            <p><u style="color: #a80000;">Welcome</u></p>
+                            <p><u style="color: #5757ff;">FastReboot</u></p>
+                        </div>
+                        <div class="column">
+                            <p><u style="color: #a80000;">Help & Index</u></p>
+                            <p><u style="color: #5757ff;">Take Tour</u></p>
+                        </div>
+                        <div class="column">
+                            <p><u style="color: #a80000;">Demo Index</u></p>
+                            <p><u style="color: #5757ff;">Key Map</u></p>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <!-- Fun Games -->
+
+                        &nbsp;
+                        <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Fun Games</p>
+
+                        <div class="gameBlock">
+
+                            <div>
+                                <img src="images/fungames/Titanium.jpg" alt="Titanium">
+                                <p style="color: #5757ff; text-align: center;">Titanium</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/BlackDiamond.jpg" alt="BlackDiamond">
+                                <p style="color: #5757ff; text-align: center;">Black</p>
+                                <p style="color: #5757ff; text-align: center;">Diamond</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/FlatBat.jpg" alt="FlatBat">
+                                <p style="color: #5757ff; text-align: center;">Flat</p>
+                                <p style="color: #5757ff; text-align: center;">Bat</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/Varoom.jpg" alt="Varoom">
+                                <p style="color: #5757ff; text-align: center;">Varoom</p>
+                            </div>
+
+                        </div>
+
+                        <div class="gameBlock">
+
+                            <div>
+                                <img src="images/fungames/FlatTops.jpg" alt="FlatTops">
+                                <p style="color: #5757ff; text-align: center;">FlatTops</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/BomberGolf.jpg" alt="BomberGolf">
+                                <p style="color: #5757ff; text-align: center;">Bomber</p>
+                                <p style="color: #5757ff; text-align: center;">Golf</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/KeepAway.jpg" alt="KeepAway">
+                                <p style="color: #5757ff; text-align: center;">KeepAway</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/RawHide.jpg" alt="RawHide">
+                                <p style="color: #5757ff; text-align: center;">RawHide</p>
+                            </div>
+
+                        </div>
+
+                        <div class="gameBlock">
+
+                            <div>
+                                <img src="images/fungames/X-Caliber.jpg" alt="X-Caliber">
+                                <p style="color: #5757ff; text-align: center;">X-Caliber</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/wenceslas.jpg" alt="Wenceslas">
+                                <p style="color: #5757ff; text-align: center;">Wenceslas</p>
+                            </div>
+
+                            <div>
+                                <img src="images/fungames/BattleLines.jpg" alt="BattleLines">
+                                <p style="color: #5757ff; text-align: center;">Battle</p>
+                                <p style="color: #5757ff; text-align: center;">Lines</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Unfun Games -->
+
+                        &nbsp;
+                        <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Unfun Games</p>
+
+                        <div class="gameBlock">
+
+                            <div>
+                                <img src="images/unfungames/talons.jpg" alt="Talons">
+                                <p style="color: #5757ff; text-align: center;">Talons</p>
+                            </div>
+
+                            <div>
+                                <img src="images/unfungames/CastleFrankestein.jpg" alt="CastleFrankestein">
+                                <p style="color: #5757ff; text-align: center;">Castle</p>
+                                <p style="color: #5757ff; text-align: center;">Frankestein</p>
+                            </div>
+
+                            <div>
+                                <img src="images/unfungames/ZoneOut.jpg" alt="ZoneOut">
+                                <p style="color: #5757ff; text-align: center;">ZoneOut</p>
+                            </div>
+
+                        </div>
+
+                        <div class="gameBlock">
+
+                            <div>
+                                <img src="images/unfungames/ToTheFront.jpg" alt="ToTheFront">
+                                <p style="color: #5757ff; text-align: center;">ToTheFront</p>
+                            </div>
+
+                            <div>
+                                <img src="images/unfungames/Span.jpg" alt="Span">
+                                <p style="color: #5757ff; text-align: center;">Span</p>
+                            </div>
+
+                            <div>
+                                <img src="images/unfungames/TreeCheckers.jpg" alt="TreeCheckers">
+                                <p style="color: #5757ff; text-align: center;">TreeCheckers</p>
+                            </div>
+
+                            <div>
+                                <img src="images/unfungames/Digits.jpg" alt="Digits">
+                                <p style="color: #5757ff; text-align: center;">Digits</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Code Scraps -->
+
+                        &nbsp;
+                        <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Code Scraps</p>
+
+                        <div class="gameBlock">
+
+
+                            <div>
+                                <img src="images/codescraps/Strut.jpg" alt="Strut">
+                                <p style="color: #5757ff; text-align: center;">Strut</p>
+                            </div>
+
+                            <div>
+                                <img src="images/codescraps/BigGuns.jpg" alt="BigGuns">
+                                <p style="color: #5757ff; text-align: center;">BigGuns</p>
+                            </div>
+
+                            <div>
+                                <img src="images/codescraps/TheDead.jpg" alt="TheDead">
+                                <p style="color: #5757ff; text-align: center;">TheDead</p>
+                            </div>
+
+                            <div>
+                                <img src="images/codescraps/DunGen.jpg" alt="DunGen">
+                                <p style="color: #5757ff; text-align: center;">DunGen</p>
+                            </div>
+
+                            <div>
+                                <img src="images/codescraps/Models.jpg" alt="Models">
+                                <p style="color: #5757ff; text-align: center;">Models</p>
+                            </div>
+
+
+                        </div>
+
+                        <!-- NonGames -->
+
+                        &nbsp;
+                        <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Nongames</p>
+
+                        <div class="gameBlock" style="margin-bottom: 25px;">
+
+                            <div>
+                                <img src="images/nongames/JukeBox.jpg" alt="JukeBox">
+                                <p style="color: #5757ff; text-align: center;">JukeBox</p>
+                            </div>
+
+                            <div>
+                                <img src="images/nongames/Psalmody.jpg" alt="Psalmody">
+                                <p style="color: #5757ff; text-align: center;">Psalmody</p>
+                            </div>
+
+                            <div>
+                                <img src="images/nongames/Budget.jpg" alt="Budget">
+                                <p style="color: #5757ff; text-align: center;">Budget</p>
+                            </div>
+
+                            <div>
+                                <img src="images/nongames/Logic.jpg" alt="Logic">
+                                <p style="color: #5757ff; text-align: center;">Logic</p>
+                            </div>
+
+                            <div>
+                                <img src="images/nongames/Vocab.jpg" alt="Vocab">
+                                <p style="color: #5757ff; text-align: center;">Vocab</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p style="color: #5757ff;"><u>List all syms in alpabetic order</u></p>
+                    <p style="color: #5757ff;"><u>List all syms in numeric order</u></p>
+
+                    &nbsp;
+
                 </div>
 
-                <div>
-                    <img src="images/fungames/FlatBat.jpg" alt="FlatBat"> 
-                    <p style="color: #5757ff; text-align: center;">Flat</p>
-                    <p style="color: #5757ff; text-align: center;">Bat</p>
+            </label>
+
+            <!-- Window B -->
+
+            <input type="checkbox" id="windowControlB" />
+            <label class="btn" for="windowControlB">
+
+                <div class="windowBar">
+
+                    <span class="term">Term</span>
+
+                    <span class="menuButton">MENU</span>
+
+                    <!-- Text Slider -->
+
+                    <div id="title">
+                        <div id="title-text">C:/Doc/AboutTempleOS.DD.Z...</div>
+                    </div>
+
+                    <span id='closeB'
+                        onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>[X]</span>
+
                 </div>
 
-                <div>
-                    <img src="images/fungames/Varoom.jpg" alt="Varoom"> 
-                    <p style="color: #5757ff; text-align: center;">Varoom</p>
+                <div class="window">
+
+                    &nbsp;
+                    <p style="color: #a800a8; text-align: center;">TempleOS</p>
+                    &nbsp;
+                    <p><a href="https://templeos.org/Downloads/" target="_blank"><u>TempleOS Downloads</u></a></p>
+                    &nbsp;
+                    <p style="color: #a800a8;">Websites:</p>
+                    <p>www.templeos.org</p>
+                    &nbsp;
+                    <p style="color: #a800a8;">Owner/President:</p>
+                    <p>Terry A. Davis</p>
+
+                    <p style="margin-top: 10px; margin-bottom: 10px;"><img src="images/Templeos-header.png"
+                            alt="TempleOS" width="280" height="200"></p>
+
+                    <p>8144 Sickle Lane</p>
+                    <p>Las Vegas, NV 89128</p>
+                    <p>(702)254-4223</p>
+                    &nbsp;
+                    <p>tdavis@templeos.org</p>
+
+                    &nbsp;
+                    <p style="color: #a800a8;">About me:</p>
+                    &nbsp;
+
+                    <p>I was a National Merit Scholar with a</p>
+                    <p>1440 SAT at Arizona State University.</p>
+                    <p>I have a bachelor's in Computer System</p>
+                    <p>Engineering from ASU, basically,</p>
+                    <p>embedded systems, and a master's in</p>
+                    <p>control systems. I worked as a </p>
+                    <p>software, hardware and mechanical</p>
+                    <p>engineer at Ticketmaster from</p>
+                    <p>1990-1996.</p>
+
+                    &nbsp;
+
+                    <p>I designed a 3 axis</p>
+                    <p>stepper-motor-driven milling machine</p>
+                    <p>1996-1997 with a CAD/CAM package for a</p>
+                    <p>company I started called Home</p>
+                    <p>Automation and Robotic Equiment.</p>
+
+
+                    <p style="margin-top: 10px; margin-bottom: 10px;"><img src="images/templeos_elephant.jpg"
+                            alt="TempleOS" width="280" height="196"></p>
+
+
+                    <p>I worked for a company named Xytec</p>
+                    <p>Corp. 1997-1999. We made FPGA-based</p>
+                    <p>image processing equiment. I wrote</p>
+                    <p><b style="color: #00a800;">SimStructure</b> from 2000-2001 for</p>
+                    <p>H.A.R.E I worked as head</p>
+                    <p>software/electrical engineer </p>
+                    <p>for a company called Graphic Technologies,</p>
+                    <p>2001-2002, making replacement chips</p>
+                    <p>for toner printer cartridges so they</p>
+                    <p>could be refilled.</p>
+
+                    &nbsp;
+                    <p style="color: #a800a8;">Credits:</p>
+                    <p>See <u style="color: #a80000;">::Doc/Credits/.DD.</u></p>
+                    &nbsp;
+
                 </div>
-
-            </div>
-
-            <div class="gameBlock">
-
-                <div>
-                    <img src="images/fungames/FlatTops.jpg" alt="FlatTops"> 
-                    <p style="color: #5757ff; text-align: center;">FlatTops</p>
-                </div>
-
-                <div>
-                    <img src="images/fungames/BomberGolf.jpg" alt="BomberGolf"> 
-                    <p style="color: #5757ff; text-align: center;">Bomber</p>
-                    <p style="color: #5757ff; text-align: center;">Golf</p>
-                </div>
-
-                <div>
-                    <img src="images/fungames/KeepAway.jpg" alt="KeepAway"> 
-                    <p style="color: #5757ff; text-align: center;">KeepAway</p>
-                </div>
-
-                <div>
-                    <img src="images/fungames/RawHide.jpg" alt="RawHide"> 
-                    <p style="color: #5757ff; text-align: center;">RawHide</p>
-                </div>
-
-            </div>
-
-            <div class="gameBlock">
-
-                <div>
-                    <img src="images/fungames/X-Caliber.jpg" alt="X-Caliber"> 
-                    <p style="color: #5757ff; text-align: center;">X-Caliber</p>
-                </div>
-
-                <div>
-                    <img src="images/fungames/wenceslas.jpg" alt="Wenceslas"> 
-                    <p style="color: #5757ff; text-align: center;">Wenceslas</p>
-                </div>
-
-                <div>
-                    <img src="images/fungames/BattleLines.jpg" alt="BattleLines"> 
-                    <p style="color: #5757ff; text-align: center;">Battle</p>
-                    <p style="color: #5757ff; text-align: center;">Lines</p>
-                </div>
-
-            </div>
-
-            <!-- Unfun Games -->
-
-            &nbsp;
-            <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Unfun Games</p>
-
-            <div class="gameBlock">
-
-                <div>
-                    <img src="images/unfungames/talons.jpg" alt="Talons"> 
-                    <p style="color: #5757ff; text-align: center;">Talons</p>
-                </div>
-
-                <div>
-                    <img src="images/unfungames/CastleFrankestein.jpg" alt="CastleFrankestein"> 
-                    <p style="color: #5757ff; text-align: center;">Castle</p>
-                    <p style="color: #5757ff; text-align: center;">Frankestein</p>
-                </div>
-
-                <div>
-                    <img src="images/unfungames/ZoneOut.jpg" alt="ZoneOut"> 
-                    <p style="color: #5757ff; text-align: center;">ZoneOut</p>
-                </div>
-
-            </div>
-
-            <div class="gameBlock">
-
-                <div>
-                    <img src="images/unfungames/ToTheFront.jpg" alt="ToTheFront"> 
-                    <p style="color: #5757ff; text-align: center;">ToTheFront</p>
-                </div>
-
-                <div>
-                    <img src="images/unfungames/Span.jpg" alt="Span"> 
-                    <p style="color: #5757ff; text-align: center;">Span</p>
-                </div>
-
-                <div>
-                    <img src="images/unfungames/TreeCheckers.jpg" alt="TreeCheckers"> 
-                    <p style="color: #5757ff; text-align: center;">TreeCheckers</p>
-                </div>
-
-                <div>
-                    <img src="images/unfungames/Digits.jpg" alt="Digits"> 
-                    <p style="color: #5757ff; text-align: center;">Digits</p>
-                </div>
-
-            </div>
-
-            <!-- Code Scraps -->
-            
-            &nbsp; 
-            <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Code Scraps</p>
-
-            <div class="gameBlock">
-
-
-            <div>
-                <img src="images/codescraps/Strut.jpg" alt="Strut"> 
-                <p style="color: #5757ff; text-align: center;">Strut</p>
-            </div>
-
-            <div>
-                <img src="images/codescraps/BigGuns.jpg" alt="BigGuns"> 
-                <p style="color: #5757ff; text-align: center;">BigGuns</p>
-            </div>
-
-            <div>
-                <img src="images/codescraps/TheDead.jpg" alt="TheDead"> 
-                <p style="color: #5757ff; text-align: center;">TheDead</p>
-            </div>
-
-             <div>
-                <img src="images/codescraps/DunGen.jpg" alt="DunGen"> 
-                <p style="color: #5757ff; text-align: center;">DunGen</p>
-            </div>
-
-             <div>
-                <img src="images/codescraps/Models.jpg" alt="Models">
-                <p style="color: #5757ff; text-align: center;">Models</p>
-            </div>
-
-
-            </div>
-
-          <!-- NonGames -->
-
-            &nbsp; 
-            <p style="color: #a800a8; margin-left: 130px; margin-top: 25px;">Nongames</p>
-
-            <div class="gameBlock" style="margin-bottom: 25px;">
-
-                <div>
-                    <img src="images/nongames/JukeBox.jpg" alt="JukeBox"> 
-                    <p style="color: #5757ff; text-align: center;">JukeBox</p>
-                </div>
-
-                <div>
-                    <img src="images/nongames/Psalmody.jpg" alt="Psalmody"> 
-                    <p style="color: #5757ff; text-align: center;">Psalmody</p>
-                </div>
-
-                <div>
-                    <img src="images/nongames/Budget.jpg" alt="Budget"> 
-                    <p style="color: #5757ff; text-align: center;">Budget</p>
-                </div>
-
-                <div>
-                    <img src="images/nongames/Logic.jpg" alt="Logic"> 
-                    <p style="color: #5757ff; text-align: center;">Logic</p>
-                </div>
-
-                <div>
-                    <img src="images/nongames/Vocab.jpg" alt="Vocab"> 
-                    <p style="color: #5757ff; text-align: center;">Vocab</p>
-                </div>
-
-            </div>
-
+            </label>
         </div>
+        <div class="bio">
 
-        <p style="color: #5757ff;"><u>List all syms in alpabetic order</u></p>
-        <p style="color: #5757ff;"><u>List all syms in numeric order</u></p>
-
-        &nbsp;
-
-            <p>I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived.</p>
-       
+            <p>This website is a tribute to <a href="https://templeos.org/"
+                    target="_blank"><strong>TempleOS</strong></a> and his creator, <a
+                    href="https://en.wikipedia.org/wiki/Terry_A._Davis" target="_blank"><strong>Terry
+                        Davis</strong></a>.</p>
+            <p>I would like to spam another project that I'm following close which is <a
+                    href="https://github.com/SerenityOS/serenity" target="_blank"><strong>SerenityOS</strong></a>.</p>
+            <p>You can follow me on Twitter <a href="https://twitter.com/RedSantar"
+                    target="_blank"><strong>@RedSantar</strong></a> and visit my personal website <a
+                    href="https://delreal.dev/" target="_blank"><strong>delreal.dev</strong></a> :)
+            </p>
+            <p>Source code of the project is on my GitHub <a href="https://github.com/del-Real/templeOStribute"
+                    target="_blank"><strong>@del-Real</strong></a>.</p>
         </div>
-
-        </label>
-
-        <!-- Window B -->
-
-        <input type="checkbox" id="windowControlB" />
-        <label class="btn" for="windowControlB">
-
-        <div class="window">
-
-        <div class="windowBar">
-
-            <span class="term">Term</span>
-
-            <span class="menuButton">MENU</span>
-
-            <!-- Text Slider -->
-                    
-            <div id="title">
-                <div id="title-text">C:/Doc/AboutTempleOS.DD.Z...</div>
-            </div>
-
-            <span id='closeB' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>[X]</span>
-
-        </div>
-
-            &nbsp;
-            <p style="color: #a800a8; text-align: center;">TempleOS</p>
-            &nbsp;
-            <p><a href="https://templeos.org/Downloads/" target="_blank"><u>TempleOS Downloads</u></a></p>
-            &nbsp;
-            <p style="color: #a800a8;">Websites:</p>        
-            <p>www.templeos.org</p>
-            &nbsp;
-            <p style="color: #a800a8;">Owner/President:</p>
-            <p>Terry A. Davis</p>
-            
-            <p style="margin-top: 10px; margin-bottom: 10px;"><img src="images/Templeos-header.png" alt="TempleOS" width="280" height="200"></p>
-
-            <p>8144 Sickle Lane</p>
-            <p>Las Vegas, NV 89128</p>
-            <p>(702)254-4223</p>
-            &nbsp;
-            <p>tdavis@templeos.org</p>
-
-            &nbsp;
-            <p style="color: #a800a8;">About me:</p>
-            &nbsp;
-
-            <p>I was a National Merit Scholar with a</p>
-            <p>1440 SAT at Arizona State University.</p>
-            <p>I have a bachelor's in Computer System</p>
-            <p>Engineering from ASU, basically,</p>
-            <p>embedded systems, and a master's in</p>
-            <p>control systems. I worked as a </p>
-            <p>software, hardware and mechanical</p>
-            <p>engineer at Ticketmaster from</p>
-            <p>1990-1996.</p>
-
-            &nbsp;
-
-            <p>I designed a 3 axis</p>
-            <p>stepper-motor-driven milling machine</p>
-            <p>1996-1997 with a CAD/CAM package for a</p>
-            <p>company I started called Home</p>
-            <p>Automation and Robotic Equiment.</p>
-          
-
-            <p style="margin-top: 10px; margin-bottom: 10px;"><img src="images/templeos_elephant.jpg" alt="TempleOS" width="280" height="196"></p>
-
-        
-            <p>I worked for a company named Xytec</p>
-            <p>Corp. 1997-1999. We made FPGA-based</p>
-            <p>image processing equiment. I wrote</p>
-            <p><b style="color: #00a800;">SimStructure</b> from 2000-2001 for</p>
-            <p>H.A.R.E I worked as head</p>
-            <p>software/electrical engineer </p>
-            <p>for a company called Graphic Technologies,</p>
-            <p>2001-2002, making replacement chips</p>
-            <p>for toner printer cartridges so they</p>
-            <p>could be refilled.</p>
-
-            &nbsp;
-            <p style="color: #a800a8;">Credits:</p>
-            <p>See <u style="color: #a80000;">::Doc/Credits/.DD.</u></p>
-            &nbsp;
-
-            <p>I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. I am the smartest programmer to have ever lived. </p>
-
-            <p style="margin-top: 10px;"><img src="images/terry.gif" alt="Terry Dancing" width="221" height="314" /></p>
-
-        </div>
-    </label>
-    </div>
-
-    <div class="bio">
-
-        <p>This website is a tribute to <strong>TempleOS</strong> and his creator, <strong>Terry Davis</strong>, who I admired as programmer a lot.</p>
-        <p>I would like to spam another project that I'm following close which is <a href="http://serenityos.org/" target="_blank"><strong>SerenityOS</strong></a>.</p>
-        <p>You can follow me on Twitter <a href="https://twitter.com/RedSantar" target="_blank"><strong>@RedSantar</strong></a> and visit my personal website <a href="https://albertodelreal.com/" target="_blank"><strong>albertodelreal.com</strong></a> :)
-        </p>
-        <p>Source code of the project is on my GitHub <a href="https://github.com/delRealberto/templeOStribute" target="_blank"><strong>@delRealberto</strong></a>.</p>
     </div>
 
 </body>

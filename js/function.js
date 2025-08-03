@@ -1,115 +1,159 @@
-/* draggeable pop up */
-
-dragElement(document.getElementById("popup"));
-
-function dragElement(elmnt) {
-    var pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-    if (document.getElementById(elmnt.id)) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id).onmousedown = dragMouseDown;
-    } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
+/* DRAGGABLE POPUP */
+class DragHandler {
+    constructor(elementId) {
+        this.element = document.getElementById(elementId);
+        if (!this.element) return;
+        
+        this.pos = { x1: 0, y1: 0, x2: 0, y2: 0 };
+        this.isDragging = false;
+        
+        this.onMouseDown = this.onMouseDown.bind(this);
+        this.onMouseMove = this.onMouseMove.bind(this);
+        this.onMouseUp = this.onMouseUp.bind(this);
+        
+        this.element.addEventListener('mousedown', this.onMouseDown);
     }
-
-    function dragMouseDown(e) {
-        e = e || window.event;
+    
+    onMouseDown(e) {
         e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
+        this.isDragging = true;
+        this.pos.x2 = e.clientX;
+        this.pos.y2 = e.clientY;
+        
+        document.addEventListener('mousemove', this.onMouseMove);
+        document.addEventListener('mouseup', this.onMouseUp);
     }
-
-    function elementDrag(e) {
-        e = e || window.event;
+    
+    onMouseMove(e) {
+        if (!this.isDragging) return;
+        
         e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        this.pos.x1 = this.pos.x2 - e.clientX;
+        this.pos.y1 = this.pos.y2 - e.clientY;
+        this.pos.x2 = e.clientX;
+        this.pos.y2 = e.clientY;
+        
+        // Calculate new position
+        let newTop = this.element.offsetTop - this.pos.y1;
+        let newLeft = this.element.offsetLeft - this.pos.x1;
+        
+        // Set the element's new position (no constraints)
+        this.element.style.top = newTop + "px";
+        this.element.style.left = newLeft + "px";
     }
-
-    function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
+    
+    onMouseUp() {
+        this.isDragging = false;
+        document.removeEventListener('mousemove', this.onMouseMove);
+        document.removeEventListener('mouseup', this.onMouseUp);
     }
 }
 
-
-/* CUSTOM SCROLLBAR */
-
-
-
-/* TIMER */
-
-function digitalClock() {
-
-    var todayHTML = document.getElementById('today-js');
-    var monthHTML = document.getElementById('month-js');
-    var timeHTML = document.getElementById('time-js');
-    var dateHTML = document.getElementById('date-js');
-    var yearHTML = document.getElementById('year-js');
-
-    var d = new Date();
-    var year = d.getFullYear();
-    var month = d.getMonth();
-    var date = d.getDate();
-    date = addZero(date);
-    var hours = d.getHours();
-    hours = addZero(hours);
-    var minutes = d.getMinutes();
-    minutes = addZero(minutes);
-    var seconds = d.getSeconds();
-    seconds = addZero(seconds);
-    var today = d.getDay();
-    var dayName = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    var monthName = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
-
-    timeHTML.innerHTML = hours + ':' + minutes + ':' + seconds;
-    todayHTML.innerHTML = dayName[today];
-    dateHTML.innerHTML = date;
-    monthHTML.innerHTML = monthName[month] + '/';
-    yearHTML.innerHTML = year;
+// Initialize drag functionality
+const popupElement = document.getElementById("popup");
+if (popupElement) {
+    new DragHandler("popup");
 }
 
-function addZero(i) {
-    if (i < 10) {
-        i = '0' + i;
+/* DIGITAL CLOCK */
+class DigitalClock {
+    constructor() {
+        // Cache DOM elements
+        this.elements = {
+            today: document.getElementById('today-js'),
+            month: document.getElementById('month-js'),
+            time: document.getElementById('time-js'),
+            date: document.getElementById('date-js'),
+        };
+        
+        // Check if all elements exist
+        if (!Object.values(this.elements).every(el => el)) {
+            console.warn('Some clock elements not found');
+            return;
+        }
+        
+        this.dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        this.monthNames = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+        
+        this.update();
+        this.intervalId = setInterval(() => this.update(), 1000);
     }
-    return i;
+    
+    update() {
+        const now = new Date();
+        
+        // Format time components
+        const hours = this.padZero(now.getHours());
+        const minutes = this.padZero(now.getMinutes());
+        const seconds = this.padZero(now.getSeconds());
+        const date = this.padZero(now.getDate());
+        
+        // Update DOM elements
+        this.elements.time.textContent = `${hours}:${minutes}:${seconds}`;
+        this.elements.today.textContent = this.dayNames[now.getDay()];
+        this.elements.date.textContent = date;
+        this.elements.month.textContent = this.monthNames[now.getMonth()] + '/';
+    }
+    
+    padZero(num) {
+        return num < 10 ? '0' + num : num.toString();
+    }
+    
+    destroy() {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+        }
+    }
 }
 
-setInterval(digitalClock, 1000);
+// Initialize clock
+const clock = new DigitalClock();
 
 /* FPS COUNTER */
-var fpsHTML = document.getElementById('fps-counter');
-
-const times = [];
-let fps;
-
-function refreshLoop() {
-    window.requestAnimationFrame(() => {
-        const now = performance.now();
-        while (times.length > 0 && times[0] <= now - 1000) {
-            times.shift();
+class FPSCounter {
+    constructor(elementId) {
+        this.element = document.getElementById(elementId);
+        if (!this.element) {
+            console.warn('FPS counter element not found');
+            return;
         }
-        times.push(now);
-        fps = times.length;
-        console.log(fps);
-        fpsHTML.innerHTML = 'FPS:' + fps;
-        refreshLoop();
-    });
+        
+        this.times = [];
+        this.isRunning = true;
+        this.lastUpdateTime = 0;
+        this.updateInterval = 100; // Update display every 100ms
+        
+        this.rafId = requestAnimationFrame(() => this.update());
+    }
+    
+    update() {
+        if (!this.isRunning) return;
+        
+        const now = performance.now();
+        
+        // Remove old timestamps (older than 1 second)
+        while (this.times.length > 0 && this.times[0] <= now - 1000) {
+            this.times.shift();
+        }
+        
+        this.times.push(now);
+        
+        // Only update DOM every updateInterval ms to reduce overhead
+        if (now - this.lastUpdateTime >= this.updateInterval) {
+            this.element.textContent = `FPS: ${this.times.length}`;
+            this.lastUpdateTime = now;
+        }
+        
+        this.rafId = requestAnimationFrame(() => this.update());
+    }
+    
+    stop() {
+        this.isRunning = false;
+        if (this.rafId) {
+            cancelAnimationFrame(this.rafId);
+        }
+    }
 }
 
-refreshLoop();
+// Initialize FPS counter
+const fpsCounter = new FPSCounter('fps-counter');
